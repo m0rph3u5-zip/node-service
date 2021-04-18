@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "start:staging": "cross-env NODE_ENV=staging nodemon --inspect=5001 --config nodemon.js src/index.js",
-    "start:production": "cross-env NODE_ENV=production nodemon --inspect=5001 --config nodemon.js src/index.js"
+    "start:production": "cross-env NODE_ENV=production nodemon --inspect=8080 --config nodemon.js src/index.js"
   },
   "author": "Savino",
   "license": "ISC",
