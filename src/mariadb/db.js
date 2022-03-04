@@ -13,10 +13,13 @@ const pools = mariadb.createPool({
 
 exports.getConnection = () => {
   return new Promise(function (resolve, reject) {
-    pools.getConnection().then(function (connection) {
-      resolve(connection);
-    }).catch(function (error) {
-      reject(error);
-    });
+    pools
+      .getConnection()
+      .then(function (db) {
+        resolve(db);
+      })
+      .catch(function (error) {
+        reject(error);
+      });
   });
-}
+};
